@@ -1,0 +1,8 @@
+.env
+# Ignore all files in the snapshots directory
+snapshots/*
+
+# Except the directory itself
+!snapshots/
+
+
