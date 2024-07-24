@@ -21,9 +21,6 @@ python main.py
 
 Screenshots are saved in the `snapshots` directory.
 
-## Future improvements
-- Integrate with ffmpeg to turn the screenshots into a timelapse video
-
 ## Docker instructions
 
 1. Build the docker image
@@ -35,7 +32,7 @@ docker build -t mjpeg-timelapse .
 ```bash
 docker run --env-file .env -v $(pwd)/snapshots:/app/snapshots -d --network host mjpeg-timelapse
 ```
->> Note: We use host networking to allow the container to access the local network.  If your device is on an external network I would reccomend using a bridge network for greater security.
+> Note: We use host networking to allow the container to access the local network.  If your device is on an external network I would reccomend using a bridge network for greater security.
 
 If all goes well you should see an output like:
 ```log
@@ -57,3 +54,5 @@ If all goes well you should see an output like:
 2024-07-24 17:43:13 Snapshot saved as snapshots/snapshot_1721864593.jpg
 ```
 
+## Future improvements
+- Integrate with ffmpeg to turn the screenshots into a timelapse video
